@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    overscroll-behavior: none;
+}
+
+
+html {
+    font-size: 14px;
+    
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: rgb(200, 117, 206);
+    font-family: Impact, sans-serif;
+    color: white;
+}
+
+header,
+section,
+footer {
+    padding: 1rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    position: sticky;
+    top: 0;
+}
+
+
+nav ul li {
+    
+    display: inline-block;
+
+}
+
+nav a {
+    text-decoration: none;
+    
+    color: inherit;
+}
+
+section {
+    min-height: 75vh;
+    scroll-margin-top: 5rem;
+    
+}
+
+section:first-child,
+header {
+    background-color: rgb(114, 28, 119);
+}
+
+section:nth-child(2) {
+    background-color: rgb(75, 19, 57);
+}
+
+footer {
+    background-color: rgb(95, 90, 175);
+}
+
+button {
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: rgb(114, 5, 215);
+    color: white;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+#backToTop {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    display: none;
+}
+
+.bg {
+    background-color: white;
+    color: black;
+}
+
+.mobile {
+    display: none;
+}
+
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay.visible {
+    display: flex;
+}
+
+.modal {
+    width: 75vh;
+    min-height: 50vh;
+    background-color: aliceblue;
+    color: black;
+    padding: 2rem;
+    position: relative;
+}
+
+.modal button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+@media (max-width: 800px) {
+
+    .mobile {
+        display: block;
+        background-color: black;
+    }
+
+    /*Which has this class not which includes*/
+    ul.responsive {
+        background-color: white;
+        color: #333;
+        position: absolute;
+        left: 0;
+        width: 100%;
+    }
+
+    ul.responsive li {
+        display: block;
+        margin: 1rem;
+        text-align: center;
+    }
+
+    header {
+        background-color: rgb(234, 161, 223);
+        color: #333;
+    }
+}
